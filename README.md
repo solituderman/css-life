@@ -5,3 +5,7 @@
 ## Layout
 
 * [001.实现五个元素水平排列，且始终左右间距为10px](https://github.com/JinganGuo/css-life/issues/1)
+
+## Animation
+
+* [001.实现按钮的呼吸动画效果](https://github.com/jinganguo/css-life/issues/2)
