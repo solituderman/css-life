@@ -1,0 +1,24 @@
+/*
+ * @Author: guojingan 
+ * @Date: 2019-12-17 16:25:52 
+ * @Last Modified by: goujingan
+ * @Last Modified time: 2019-12-17 16:47:41
+ * @Description: 全局 CSS 样式
+ */
+
+@import "./normalize";
+@import "./common";
+
+html {
+  max-width: $htmlMaxWidth;
+  height: 100%;
+  margin: 0 auto;
+  font-family: Helvetica, "宋体", Tahoma, Arial, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  height: 100%;
+  color: $color-default;
+  background: $color-bg-default;
+}
