@@ -1,5 +1,5 @@
 <template>
-  <div class="index-wrap">CSSLIFE</div>
+  <div class="index-wrap">CSS Life</div>
 </template>
 
 <script>
