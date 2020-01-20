@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <div class="index-wrap">CSS Life</div>
-    <d-menu></d-menu>
+  <div class="home-index">
+    <div class="home-title">CSS LIFE</div>
+    <d-menu class="home-menu"></d-menu>
   </div>
 </template>
 
@@ -19,8 +19,11 @@ export default {
 </script>
 
 <style lang="scss">
-// @import '@/styles/global.scss';
-
-.index-wrap {
+.home-index {
+  padding: 36px 0;
+  .home-title {
+    text-align: center;
+    font-size: 26px;
+  }
 }
 </style>

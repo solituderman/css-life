@@ -1,6 +1,9 @@
 <template>
-  <div>
-    this is layout
+  <div class="layout">
+    <div class="layout-list-wrap">
+      <div>布局001</div>
+      <div>布局002</div>
+    </div>
   </div>
 </template>
 

@@ -1,6 +1,9 @@
 <template>
-  <div>
-    this is animation
+  <div class="animation">
+    <div class="animation-list-wrap">
+      <div>动画001</div>
+      <div>动画002</div>
+    </div>
   </div>
 </template>
 

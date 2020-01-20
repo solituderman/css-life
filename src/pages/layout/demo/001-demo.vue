@@ -1,6 +1,6 @@
 <template>
-  <div class="app">
-    <router-view></router-view>
+  <div class="001-demo">
+    this is demo 001
   </div>
 </template>
 
@@ -13,9 +13,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/styles/global.scss';
+.001-demo {
 
-.app {
-  padding: 0 16px;
 }
 </style>
