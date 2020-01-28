@@ -14,8 +14,4 @@ export default {
 
 <style lang="scss">
 @import '@/styles/global.scss';
-
-.app {
-  padding: 0 16px;
-}
 </style>
