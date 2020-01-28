@@ -3,7 +3,7 @@
     <div
       v-for="(item, index) in menu"
       :key="index"
-      @click="clickMenu(item.path)"
+      @click="clickMenu(item)"
       class="d-menu-item"
     >
       {{ item.label }}
@@ -22,8 +22,8 @@ export default {
     }
   },
   methods: {
-    clickMenu(path) {
-      this.$router.push(path)
+    clickMenu(item) {
+      this.$router.push({ path: item.path, query: { title: item.label } })
     },
   },
 }

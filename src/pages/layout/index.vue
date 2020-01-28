@@ -1,30 +1,31 @@
 <template>
-  <div class="layout">
-    <div class="layout-list-wrap">
-      <div v-for="(item, index) in lists" :key="index" @click="viewLayoutDetail(item.path)">
-        {{ index + 1 }}.{{item.label}}
-      </div>
-    </div>
+  <div>
+    <d-title-bar :title="title"></d-title-bar>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
+import DTitleBar from '../../components/d-title-bar'
+
 export default {
   data() {
     return {
-      lists: [
-        {
-          path: '/layout/001-demo',
-          label: 'xxx'
-        }
-      ]
+      title: this.$route.query.title || '',
     }
   },
-  methods: {
-    viewLayoutDetail(path) {
-      this.$router.push(path)
-    }
-  }
+  components: {
+    DTitleBar,
+  },
+  watch: {
+    $route: {
+      handler: function(newVal) {
+        this.title = newVal.query.title
+      },
+    },
+    immediate: true,
+    deep: true,
+  },
 }
 </script>
 

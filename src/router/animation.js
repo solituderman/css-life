@@ -1,5 +1,5 @@
 import Animation from '../pages/animation'
 
-const router = [{ path: '/animation/', component: Animation }]
+const router = [{ path: '/animation', name: 'animation', component: Animation }]
 
 export default router

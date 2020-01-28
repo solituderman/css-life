@@ -1,9 +1,18 @@
 import Layout from '../pages/layout'
-import Demo001 from '../pages/layout/demo/001-demo'
+import LayoutList from '../pages/layout/demo/list'
+import Layout001 from '../pages/layout/demo/layout-001'
 
 const router = [
-  { path: '/layout/', component: Layout },
-  { path: '/layout/001-demo', component: Demo001 },
+  {
+    path: '/layout',
+    name: 'layout',
+    component: Layout,
+    redirect: '/layout',
+    children: [
+      { path: '/', component: LayoutList },
+      { path: 'layout-001', name: 'layout-001', component: Layout001 },
+    ],
+  },
 ]
 
 export default router
