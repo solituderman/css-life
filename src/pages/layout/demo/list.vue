@@ -18,10 +18,12 @@ export default {
       lists: [
         {
           path: '/layout/layout-001',
+          title: 'layout-001',
           label: '实现五个元素水平排列且始终左右间距为10px',
         },
         {
-          path: '/layout/layout-001',
+          path: '/layout/layout-002',
+          title: 'layout-002',
           label: '实现五个元素水平排列且始终左右间距为10px',
         },
       ],
@@ -29,7 +31,10 @@ export default {
   },
   methods: {
     viewLayoutDetail(item) {
-      this.$router.push({ path: item.path, query: { title: item.label } })
+      this.$router.push({
+        path: item.path,
+        query: { title: item.title, label: item.label },
+      })
     },
   },
 }

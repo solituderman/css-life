@@ -1,14 +1,28 @@
 <template>
   <div class="d-not-found" @click="backHome">
     <p>404</p>
-    <p>回到主页</p>
+    <p>{{ nowtime }}s 后<span class="back-home">回到主页</span></p>
   </div>
 </template>
 
 <script>
 export default {
   data() {
-    return {}
+    return {
+      timer: null,
+      nowtime: 5,
+    }
+  },
+  created() {
+    this.timer = setInterval(() => {
+      if (--this.nowtime < 0) {
+        this.backHome()
+        clearInterval(this.timer)
+      }
+    }, 1000)
+  },
+  destroyed() {
+    clearInterval(this.timer)
   },
   methods: {
     backHome() {
@@ -19,6 +33,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import '@/styles/global';
 .d-not-found {
   position: fixed;
   top: 50%;
@@ -29,6 +44,10 @@ export default {
   color: #666;
   p:first-of-type {
     font-size: 24px;
+  }
+
+  .back-home {
+    color: $color-default;
   }
 }
 </style>

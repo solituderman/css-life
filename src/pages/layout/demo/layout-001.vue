@@ -1,6 +1,6 @@
 <template>
   <div class="layout-demo-001">
-    <div class="demo-title">{{ title }}</div>
+    <div class="demo-title">{{ label }}</div>
     <div>效果</div>
     <div class="example">
       <div>
@@ -20,7 +20,6 @@
       </div>
     </div>
     <div>实现思路</div>
-
   </div>
 </template>
 
@@ -28,7 +27,7 @@
 export default {
   data() {
     return {
-      title: this.$route.query.title,
+      label: this.$route.query.label,
     }
   },
 }
@@ -58,7 +57,7 @@ export default {
   .example > div > div {
     width: 100%;
     height: 100%;
-    background: lightblue;
+    background: #999;
   }
 }
 </style>
